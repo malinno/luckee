@@ -4,6 +4,7 @@ const spinWheelRoutes = require('./routes/spinWheelRoutes');
 const userRoutes = require('./routes/userRoutes');
 const luckyRoutes = require('./routes/luckyRoutes');
 const voucherRoutes = require('./routes/voucherRoutes');
+const spinRoutes = require('./routes/spinRoutes'); 
 const app = express();
 const PORT = 3000;
 
@@ -20,4 +21,7 @@ app.use('/api/spinwheels', spinWheelRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/lucky',luckyRoutes);
 app.use('/api/vouchers', voucherRoutes);
+// Sử dụng router mới
+app.use('/spin', spinRoutes);
+
 app.listen(PORT, () => console.log(`Server đang lắng nghe tại cổng ${PORT}`));

@@ -59,4 +59,8 @@ router.put('/:id/spin_count', async (req, res) => {
     await spinWheel.save();
     res.json(spinWheel);
   } catch (error) {
-    res.status(500).json({ error: 'Không thể cập nhật số lần qu
+    res.status(500).json({ error: 'Không thể cập nhật số lần quay của vòng quay may mắn.' });
+  }
+});
+
+module.exports = router;
